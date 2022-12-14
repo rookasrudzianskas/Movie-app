@@ -16,7 +16,7 @@
     {#if !active}
         <label for="search_movie">Search Movie</label>
     {/if}
-        <input on:blur={cancelInactive} on:focus={() => active = true} bind:value={inputValue} type="text" name="search_movie">
+        <input class={active ? 'selected' : ''} on:blur={cancelInactive} on:focus={() => active = true} bind:value={inputValue} type="text" name="search_movie">
     {#if inputValue}
         <button>Search</button>
     {/if}
@@ -46,5 +46,9 @@
         border-radius: 5px;
         background-color: #ccc;
         cursor: pointer;
+    }
+
+    input.selected {
+        background: rgb(50, 50, 50);
     }
 </style>
