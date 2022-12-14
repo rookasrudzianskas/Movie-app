@@ -3,6 +3,7 @@
     import { onMount } from 'svelte';
     import PopularMovies from "../components/PopularMovies.svelte";
     import global from '../global.css';
+    import SearchMovies from "../components/SearchMovies.svelte";
     export let movies;
 
     onMount(async () => {
@@ -17,5 +18,6 @@
 </script>
 
 <section>
+    <SearchMovies />
     <PopularMovies {movies} />
 </section>
