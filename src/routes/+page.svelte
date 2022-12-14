@@ -2,6 +2,7 @@
 <script>
     import { onMount } from 'svelte';
     import PopularMovies from "../components/PopularMovies.svelte";
+    import global from '../global.css';
     export let movies;
 
     onMount(async () => {
